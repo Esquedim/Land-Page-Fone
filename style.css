@@ -6,6 +6,7 @@
   border: none;
   outline: none;
   text-transform: capitalize;
+  list-style: none;
 }
 
 html,
@@ -47,12 +48,13 @@ li {
 
 /* ---------------- ESPAÇAMENTO PADRÃO ---------------- */
 section {
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
   height: auto;
 }
 
 h2 {
   margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 h3 {
@@ -95,7 +97,6 @@ section {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  list-style-type: none;
 }
 
 .secao {
@@ -238,33 +239,14 @@ section {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 4rem 2rem;
 }
-
-.apresentacao h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--cor-secundaria);
-  background: linear-gradient(90deg, #FF6B6B, #FFD93D);
-  padding: 1rem 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  line-height: 1.4;
-}
-
-.h2-segundo {
-  margin-top: 5rem;
-}
-
 .video {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   width: 90%;   /* ocupa toda a largura do container */
   height: auto;  /* ajusta a altura sem distorcer */
   max-width: 90%;
-}
-
-.h2-terceiro {
-  margin-top: 5rem;
 }
 
 .paragrafo {
@@ -280,17 +262,6 @@ section {
   padding: 4rem 2rem;
 }
 
-.beneficios h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--cor-secundaria);
-  background: linear-gradient(90deg, #FF6B6B, #FFD93D);
-  padding: 1rem 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  line-height: 1.4;
-}
-
 .videos-section {
   display: flex;
   flex-direction: column;
@@ -303,7 +274,9 @@ section {
 }
 
 .conteiner-video-principal iframe {
+  max-width: 100%;
   width: 30rem;
+  height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 20px;
   border: none;
@@ -317,7 +290,9 @@ section {
 }
 
 .container-videos iframe {
-  width: 100%;
+  max-width: 100%;
+  width: 30rem;
+  height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 20px;
   border: none;
@@ -330,10 +305,6 @@ section {
   align-items: center;
   margin-top: 2rem;
   flex-wrap: wrap;
-}
-
-.link {
-  list-style: none;
 }
 
 .icon {
@@ -430,13 +401,10 @@ section {
   margin: 1rem auto;
 }
 
-.quem-sou h2 {
-  color: var(--cor-link);
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
 /* ---------------- Prova social ---------------- */
+.prova-social{
+  padding: 4rem 2rem;
+}
 .h2 {
   font-size: 2rem;
   text-align: center;
@@ -468,7 +436,12 @@ section {
   color: var(--cor-secundaria);
   font-size: 1.5rem;
   padding-bottom: 1rem;
+  text-align: center;
 }
+.texto h2 {
+  text-align: center;
+}
+
 
 .conteiner-footer {
   display: flex;
@@ -526,14 +499,6 @@ section {
   }
 }
 
-/* Telas até 1005px ok*/
-@media (max-width: 1005px) {
-  section {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
 /* Telas até 992px ok*/
 @media (max-width: 992px) {}
 
@@ -544,54 +509,28 @@ section {
     width: 7rem;
   }
 
-  .video {
-    width: 45rem;
-  }
-
-  .texto h2 {
-    text-align: center;
-  }
-
-  .texto p {
-    text-align: center;
-  }
-
-  .section-sou {
-    gap: 2rem;
-  }
-
   .conteiner-user img {
     width: 18rem;
     margin-left: 0rem;
   }
   .section-sou {
     flex-direction: column;
+    gap: 2rem;
   }
 }
 
 /* Telas até 600px ok*/
 @media (max-width: 600px) {
-  .section-sou {
-    gap: 2rem;
-  }
 
   .conteiner-user img {
     margin-bottom: 3rem;
   }
-
-  
-
-  .conteiner-lista {
-    margin-left: 2rem;
-  }
-
 
   .conteiner {
     padding: 1rem;
   }
   .conteiner-lista {
     display: none;
-    /* esconde no mobile */
     position: absolute;
     top: 7rem;
     right: 2rem;
@@ -608,14 +547,16 @@ section {
 
   .conteiner-lista.show {
     display: block;
-    /* aparece quando clicar */
+ 
   }
 
   .menu-toggle {
     display: block;
-    /* mostra o ícone */
     position: relative;
     margin-left: 10rem;
+  }
+  .sumir1{
+    display: none;
   }
 }
 
@@ -647,6 +588,10 @@ section {
   }
 }
 
+
+
+
+
 /* Telas até 480px ok*/
 @media (max-width: 480px) {
   .conteiner {
@@ -661,20 +606,12 @@ section {
     width: 28rem;
   }
 
-  .conteiner-video-principal iframe {
-    width: 25rem;
-  }
-
   .texto h2 {
     padding-right: 1rem;
   }
 
   .conteiner-lista {
     right: 3.5rem;
-  }
-  .section {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
   }
 }
 
@@ -707,10 +644,6 @@ section {
 @media (max-width: 375px) {
   .titulo {
     font-size: 1.8rem;
-  }
-
-  .conteiner-video-principal iframe {
-    width: 20rem;
   }
 
   .conteiner {
@@ -772,8 +705,6 @@ section {
   .menu-toggle {
     right: 2rem;
   }
-  .sumir{
-    display: none;
-  }
+  
 }
 
