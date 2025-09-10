@@ -47,10 +47,6 @@ li {
 }
 
 /* ---------------- ESPAÇAMENTO PADRÃO ---------------- */
-section {
-  padding: 4rem 0rem;
-  height: auto;
-}
 
 h2 {
   margin-bottom: 2rem;
@@ -71,6 +67,8 @@ section {
   border-image: linear-gradient(90deg, #FF6B6B, #FFD93D);
   border-image-slice: 1;
   padding-bottom: 4rem;
+  padding: 4rem 0rem;
+  height: auto;
 }
 
 /* ---------------- HEADER ---------------- */
@@ -128,6 +126,7 @@ section {
   background-position: center;
   height: 100vh;
   padding: 2rem;
+  gap: 2rem;
   text-align: center;
 }
 
@@ -148,7 +147,7 @@ section {
 
 .titulo {
   color: var(--cor-secundaria);
-  font-size: 2rem;
+  font-size:  clamp(1.5rem, 2vw, 3rem);
   line-height: 1.4;
 }
 
@@ -162,8 +161,10 @@ section {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  width: 31.25rem;
-  margin: 2rem auto;
+  max-width: 60%;
+  min-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
   height: auto;
 }
 
@@ -260,6 +261,8 @@ section {
 .beneficios {
   background-color: #fff;
   padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .videos-section {
@@ -283,8 +286,8 @@ section {
 }
 
 .container-videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 100%;
 }
@@ -404,6 +407,8 @@ section {
 /* ---------------- Prova social ---------------- */
 .prova-social{
   padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .h2 {
   font-size: 2rem;
@@ -526,9 +531,6 @@ section {
     margin-bottom: 3rem;
   }
 
-  .conteiner {
-    padding: 1rem;
-  }
   .conteiner-lista {
     display: none;
     position: absolute;
@@ -564,23 +566,8 @@ section {
 @media (max-width: 540px) {
   
 
-  .conteiner {
-    padding: 0rem;
-    margin: 2rem;
-  }
-
   .icon i {
     width: 5rem;
-  }
-
-  .beneficios .conteiner {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-
-  .prova-social .conteiner {
-    margin-right: 0rem;
-    margin-left: 0rem;
   }
 
   .cta {
@@ -594,18 +581,6 @@ section {
 
 /* Telas até 480px ok*/
 @media (max-width: 480px) {
-  .conteiner {
-    width: 28rem;
-  }
-
-  .beneficios .conteiner {
-    width: 26rem;
-  }
-
-  .prova-social .conteiner {
-    width: 28rem;
-  }
-
   .texto h2 {
     padding-right: 1rem;
   }
@@ -617,24 +592,7 @@ section {
 
 /* Telas até 414px ok*/
 @media (max-width: 414px) {
-  .conteiner {
-    width: 25rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-  }
-
-  .beneficios .conteiner {
-    width: 23rem;
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-
-  .prova-social .conteiner {
-    width: 23rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-  }
-
+ 
   .cta {
     font-size: 0.8rem;
   }
@@ -646,17 +604,6 @@ section {
     font-size: 1.8rem;
   }
 
-  .conteiner {
-    width: 21rem;
-  }
-
-  .beneficios .conteiner {
-    width: 21rem;
-  }
-
-  .prova-social .conteiner {
-    width: 21rem;
-  }
 
   .texto p {
     padding-left: 1rem;
@@ -665,10 +612,6 @@ section {
   .quem-sou p {
     overflow: hidden;
     width: 20rem;
-  }
-
-  .container-videos iframe {
-    width: 15rem;
   }
 
   .conteiner-lista {
@@ -682,29 +625,12 @@ section {
 
 /* Telas até 360px ok*/
 @media (max-width: 360px) {
-  .beneficios .conteiner {
-    width: 19rem;
-  }
-
-  .beneficios .cta {
-    font-size: 0.7rem;
-  }
-
-  .prova-social .conteiner {
-    width: 19rem;
-  }
-
-  .prova-social .cta {
+  .cta{
     font-size: 0.7rem;
   }
 
   .conteiner-lista {
     right: 0.5rem;
   }
-
-  .menu-toggle {
-    right: 2rem;
-  }
-  
 }
 
