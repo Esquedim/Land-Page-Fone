@@ -258,6 +258,9 @@ section {
 .video {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
+  width: 90%;   /* ocupa toda a largura do container */
+  height: auto;  /* ajusta a altura sem distorcer */
+  max-width: 90%;
 }
 
 .h2-terceiro {
@@ -561,16 +564,15 @@ section {
     width: 18rem;
     margin-left: 0rem;
   }
+  .section-sou {
+    flex-direction: column;
+  }
 }
 
 /* Telas até 600px ok*/
 @media (max-width: 600px) {
   .section-sou {
     gap: 2rem;
-  }
-
-  .section-sou {
-    flex-direction: column;
   }
 
   .conteiner-user img {
@@ -581,10 +583,6 @@ section {
 
   .conteiner-lista {
     margin-left: 2rem;
-  }
-
-  .video {
-    width: 35rem;
   }
 
 
@@ -630,10 +628,6 @@ section {
     margin: 2rem;
   }
 
-  .video {
-    width: 30rem;
-  }
-
   .icon i {
     width: 5rem;
   }
@@ -665,10 +659,6 @@ section {
 
   .prova-social .conteiner {
     width: 28rem;
-  }
-
-  .video {
-    width: 25rem;
   }
 
   .conteiner-video-principal iframe {
@@ -717,10 +707,6 @@ section {
 @media (max-width: 375px) {
   .titulo {
     font-size: 1.8rem;
-  }
-
-  .video {
-    width: 20rem;
   }
 
   .conteiner-video-principal iframe {
@@ -791,5 +777,3 @@ section {
   }
 }
 
-/* Telas até 320px */
-@media (max-width: 320px) {}
