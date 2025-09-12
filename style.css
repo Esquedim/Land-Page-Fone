@@ -561,7 +561,9 @@ section {
 
 /* Telas até 414px ok*/
 @media (max-width: 414px) {
- 
+ .conteiner{
+  padding: 0;
+ }
   .cta {
     font-size: 0.8rem;
   }
