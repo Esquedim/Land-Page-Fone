@@ -147,7 +147,7 @@ section {
 
 .titulo {
   color: var(--cor-secundaria);
-  font-size:  clamp(1.5rem, 2vw, 3rem);
+  font-size:  clamp(1rem, 2vw, 3rem);
   line-height: 1.4;
 }
 
@@ -162,7 +162,7 @@ section {
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   max-width: 60%;
-  min-width: 330px;
+  min-width: 310px;
   margin-left: auto;
   margin-right: auto;
   height: auto;
@@ -395,6 +395,8 @@ section {
   background-color: var(--cor-primaria);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -402,7 +404,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 0.5rem;
   padding-top: 2rem;
 }
 
@@ -412,10 +414,6 @@ section {
   padding-bottom: 1rem;
   text-align: center;
 }
-.texto h2 {
-  text-align: center;
-}
-
 
 .conteiner-footer {
   display: flex;
@@ -425,21 +423,28 @@ section {
   flex-wrap: wrap;
 }
 
-.icon-instagran {
-  font-size: 5rem;
-  color: var(--cor-secundaria);
+.conteiner-footer .link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;  
+  height: 4rem;
+  border-radius: 50%; 
+  text-decoration: none;
 }
 
-.whats {
-  background-color: var(--cor-cta);
+.conteiner-footer i {
+  font-size: 3rem; 
   color: var(--cor-secundaria);
-  border-radius: 100%;
-  padding: 1rem;
-  font-size: 2rem;
 }
 
 .garantia {
-  width: 7rem;
+  width: 4rem; 
+  height: auto;
+}
+
+.link {
+  transition: transform 0.2s ease;
 }
 
 .link:hover {
@@ -460,11 +465,8 @@ section {
 @media (max-width: 1400px) {}
 
 /* Telas até 1200px ok*/
-@media (max-width: 1200px) {
-  .whats {
-    font-size: 3rem;
-  }
-}
+@media (max-width: 1200px) {}
+ 
 
 /* Telas até 1024px ok*/
 @media (max-width: 1024px) {
@@ -529,15 +531,13 @@ section {
   .sumir1{
     display: none;
   }
+  .titulo{
+   padding-top: 40px;
+  }
 }
 
 /* Telas até 540px ok*/
 @media (max-width: 540px) {
-  
-
-  .icon i {
-    width: 5rem;
-  }
 
   .cta {
     font-size: 1rem;
@@ -545,14 +545,8 @@ section {
 }
 
 
-
-
-
 /* Telas até 480px ok*/
 @media (max-width: 480px) {
-  .texto h2 {
-    padding-right: 1rem;
-  }
 
   .conteiner-lista {
     right: 3.5rem;
@@ -575,11 +569,6 @@ section {
     font-size: 1.8rem;
   }
 
-
-  .texto p {
-    padding-left: 1rem;
-  }
-
   .quem-sou p {
     overflow: hidden;
     width: 20rem;
@@ -599,7 +588,9 @@ section {
   .cta{
     font-size: 0.7rem;
   }
-
+  .texto p{
+    padding-right: 0.5rem;
+  }
   .conteiner-lista {
     right: 0.5rem;
   }
