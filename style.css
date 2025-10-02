@@ -80,38 +80,11 @@ section {
   padding: 1rem 3rem;
 }
 
+.img{
+  display: flex;
+}
 .img img {
   width: 10rem;
-  margin-right: 20rem;
-}
-
-.conteiner-lista {
-  display: flex;
-}
-
-.listas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.secao {
-  color: var(--cor-link);
-}
-
-.link:hover {
-  transform: translateY(-5px);
-}
-
-.menu-toggle i {
-  color: var(--cor-secundaria);
-  font-size: 2rem;
-}
-
-.menu-toggle {
-  display: none;
 }
 
 /* ---------------- HOME ---------------- */
